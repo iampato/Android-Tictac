@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
                         if (hasSomeoneWon()) {
                             if (player1turn) {
-//                                Toast.makeText(getApplicationContext(), "Player 1 won", Toast.LENGTH_LONG).show();
                                 showAlert("Player 1 won", getApplicationContext());
                             } else {
+                                showAlert("Player 2 won", getApplicationContext());
                                 Toast.makeText(getApplicationContext(), "Player 2 won", Toast.LENGTH_LONG).show();
                             }
                         } else if (rounds == 9) {
-                            Toast.makeText(getApplicationContext(), "Player 1 won", Toast.LENGTH_LONG).show();
+                            showAlert("A draw", getApplicationContext());
                         } else {
                             player1turn = !player1turn;
 
